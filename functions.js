@@ -18,11 +18,11 @@ $(document).ready(function(){
     $("#new-quote").on("click", function(){
      
    
-     $.getJSON(url,function(data){
-         quoteForShare=getQuoteForShare(data);
+     $.getJSON(url,function(jsonData){
+        quoteForShare=getQuoteForShare(jsonData);
          //Changing text
-        changeText(data);
-        changeAuthor(data);
+        changeText(jsonData);
+        changeAuthor(jsonData);
         }); 
         
         //Color change
@@ -52,19 +52,19 @@ $(document).ready(function(){
 
 
 function changeColor(){
-     var color = Math.floor(Math.random() * colors.length);
+     var indexOfColor = Math.floor(Math.random() * colors.length);
       //Condition that makes sure that colors are not the same twice
-      while(color===currentColor){
-            color = Math.floor(Math.random() * colors.length);
+      while(indexOfColor===currentColor){
+            indexOfColor = Math.floor(Math.random() * colors.length);
         }
         
-     currentColor=color;
+     currentColor=indexOfColor;
       $("body").animate({
-        backgroundColor: colors[color],
-        color: colors[color]
+        backgroundColor: colors[indexOfColor],
+        color: colors[indexOfColor]
       }, 1000);
       $(".button").animate({
-        backgroundColor: colors[color]
+        backgroundColor: colors[indexOfColor]
       }, 1000);
     
 }
@@ -72,11 +72,11 @@ function changeColor(){
 function changeText(data){
      $(".quote-text").animate({
           opacity: 0
-        }, 500,
+        }, 360,
         function() {
           $(this).animate({
             opacity: 1
-          }, 500);
+          }, 400);
           $('#quote').text(data.quoteText);
         });
 
@@ -85,11 +85,11 @@ function changeText(data){
 function changeAuthor(data){
       $(".quote-author").animate({
           opacity: 0
-        }, 500,
+        }, 360,
         function() {
           $(this).animate({
             opacity: 1
-          }, 500);
+          }, 400);
           $('#author').html(data.quoteAuthor);
         });
 
