@@ -1,0 +1,28 @@
+{
+  "name": "randomquotegenerator",
+  "version": "1.0.0",
+  "description": "Random quote generator",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhelic98/randomQuoteGenerator.git"
+  },
+  "keywords": [
+    "Quote"
+  ],
+  "author": "Dzenan Helic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhelic98/randomQuoteGenerator/issues"
+  },
+  "homepage": "https://github.com/dhelic98/randomQuoteGenerator#readme",
+  "dependencies": {
+    "express": "^4.15.5"
+  }
+}
