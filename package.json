@@ -2,7 +2,7 @@
   "name": "randomquotegenerator",
   "version": "1.0.0",
   "description": "Random quote generator",
-  "main": "server.js",
+  "main": "index.html",
   "directories": {
     "lib": "lib"
   },
